@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(forest-931706_1920.jpg);
+    overflow: hidden;
+} 
+h1{
+    color: white;
+    font-weight: bolder;
+}
+.circle{
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+.out-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+    background: conic-gradient(rgb(183, 226, 102) 25%, rgb(173, 228, 241) 0 60%, rgb(166, 228, 166) 0);
+    border-radius: 50%;
+}
+.inner-circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-color: rgb(50, 58, 50);
+    border-radius: 50%;
+}
+span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.dot-circle{
+    position: absolute;
+    bottom: 50%;
+    left: 49%;
+    width: 10px;
+    height: 100px;
+    transform-origin: bottom;
+    animation: roundCircle 7.5s linear infinite running;
+}
+.dot{
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+@keyframes roundCircle{
+    0%{ transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.grow{
+    animation: grow 1.6s linear forwards;
+}
+@keyframes grow{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+.shrink{
+    animation: shrink 2.6s linear forwards;
+}
+@keyframes shrink{
+    from{
+        transform: scale(1.2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
